@@ -5,16 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { EntrarComponent } from './entrar/entrar.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     RodapeComponent,
-    SignInComponent,
-    EntrarComponent
+    LoginComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

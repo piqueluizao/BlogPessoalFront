@@ -1,0 +1,11 @@
+#img-bg{
+    background-image: url('https://sizeweb.com.br/wp-content/uploads/2018/12/cadastrar-produtos-loja-online.jpg');
+
+    min-height: 622px;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+}
