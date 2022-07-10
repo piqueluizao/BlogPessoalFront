@@ -9,6 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 
@@ -18,7 +19,8 @@ import { EntrarComponent } from './entrar/entrar.component';
     MenuComponent,
     RodapeComponent,
     CadastrarComponent,
-    EntrarComponent
+    EntrarComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
