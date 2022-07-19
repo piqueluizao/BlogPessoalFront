@@ -44,5 +44,6 @@ alert('Usuário cadastrado com sucesso')
   
   
   }
-    }
 }
+}
+
