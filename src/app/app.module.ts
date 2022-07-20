@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +17,8 @@ import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { PostagensEditComponent } from './edit/postagens-edit/postagens-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { TokenInterceptorService } from './service/token-interceptor.service';
 
 
 
@@ -32,7 +34,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     TemaEditComponent,
     TemaDeleteComponent,
     PostagensEditComponent,
-    PostagemDeleteComponent
+    PostagemDeleteComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,14 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
+  },
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
   }],
+  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

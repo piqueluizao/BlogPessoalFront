@@ -28,6 +28,7 @@ export class InicioComponent implements OnInit {
   constructor(private router: Router, private postagemService: PostagemService, private temaService: TemaService, private authService: AuthService) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     if(environment.token == ''){
       alert('Sua seção espirou, faça o login novamente')
       this.router.navigate(['/entrar'])
